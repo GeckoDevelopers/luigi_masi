@@ -1,0 +1,70 @@
+.footer {
+  background-color: $blue;
+  padding: 112px 0;
+
+  &__wrapper {
+    width: 80%;
+    margin: 0 auto 90px;
+    max-width: 1648px;
+
+    @include tablet {
+      width: 80%;
+    }
+
+    @include desktop {
+      width: 90%;
+    }
+  }
+
+  &__icons-wrapper {
+    width: 100%;
+    max-width: 220px;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+    @include tablet {
+      max-width: 793px;
+      flex-wrap: unset;
+    }
+  }
+
+  &__icon {
+    width: 76px;
+    margin-right: auto;
+    margin-bottom: 40px;
+
+    &:nth-child(even) {
+      margin-right: 0;
+
+      @include tablet {
+        margin-right: auto;
+      }
+    }
+
+    @include tablet {
+      margin-right: auto;
+      margin-bottom: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__text {
+    font-size: $text20;
+    line-height: $lHeight20;
+    text-align: center;
+    margin-bottom: 90px;
+
+    @include tablet {
+      text-align: left;
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    font-size: $text16;
+  }
+}
