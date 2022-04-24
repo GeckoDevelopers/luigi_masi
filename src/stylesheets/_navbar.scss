@@ -35,6 +35,7 @@
   &__menu {
     width: 25px;
     margin-top: 9px;
+    cursor: pointer;
 
     @include desktop {
       display: none;

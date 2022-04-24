@@ -1,0 +1,112 @@
+.hamburger {
+  position: relative;
+  z-index: 5;
+
+  &--pos-fixed {
+    overflow: hidden;
+    height: 100vh;
+    @include desktop {
+      overflow: inherit;
+      height: initial;
+    }
+  }
+
+  &__line1 {
+    transition: transform 0.4s ease-in-out;
+
+    &--selected {
+      transform: rotate(45deg) translate(10px, -10px);
+    }
+  }
+
+  &__line2 {
+    transform-origin: 0% 0%;
+    transition: transform 0.3s ease-in-out;
+
+    &--selected {
+      display: none;
+    }
+  }
+
+  &__line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+
+    &--selected {
+      transform: rotate(-45deg) translate(10px, 13px);
+    }
+  }
+
+  &--pos-fixed {
+    overflow: hidden;
+    height: 100vh;
+    @include desktop {
+      overflow: inherit;
+      height: initial;
+    }
+  }
+
+  &__list {
+    position: fixed;
+    top: 116px;
+    right: -100%;
+    width: 100%;
+    height: calc(100% - 116px);
+    display: flex;
+    padding-top: 100px;
+    transition: right 500ms;
+    font-size: 10px;
+    line-height: $lHeight17;
+    pointer-events: none;
+
+    &--bg-white {
+      background-color: $white;
+    }
+
+    &--bg-black {
+      background-color: $black;
+    }
+  }
+
+  &--active {
+    right: 0;
+  }
+
+  &__list-wrapper {
+    margin: 0 auto;
+  }
+
+  &__list-items {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 500;
+    pointer-events: all;
+    cursor: pointer;
+
+    &:hover .hamburger__chevron {
+      stroke: $black !important;
+    }
+
+    &--green {
+      color: $black;
+
+      &:hover {
+        color: $black;
+      }
+    }
+
+    &--white {
+      color: $white;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}
+
+#js-open-hamburger-menu {
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}

@@ -1,8 +1,8 @@
 .footer {
   background-color: $blue;
-  padding: 112px 0;
 
   &__wrapper {
+    padding: 112px 0 0;
     width: 80%;
     margin: 0 auto 90px;
     max-width: 1648px;
@@ -26,11 +26,12 @@
     @include tablet {
       max-width: 793px;
       flex-wrap: unset;
+      margin-bottom: 40px;
     }
   }
 
   &__icon {
-    width: 76px;
+    width: 50px;
     margin-right: auto;
     margin-bottom: 40px;
 
@@ -66,5 +67,6 @@
   &__copyright {
     text-align: center;
     font-size: $text16;
+    padding-bottom: 30px;
   }
 }
