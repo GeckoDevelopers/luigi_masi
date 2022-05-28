@@ -1,7 +1,4 @@
 .navbar {
-  padding: 21px 41px;
-  display: flex;
-  align-items: center;
   position: fixed;
   width: 100%;
   z-index: 2;
@@ -11,6 +8,15 @@
     rgba(0, 0, 0, 0.19) 78.65%,
     rgba(0, 0, 0, 0.09) 100%
   );
+
+  &__container {
+    padding: 21px 0;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 1169px;
+    margin: 0 auto;
+  }
 
   &__logo-wrapper {
     max-width: 71px;
